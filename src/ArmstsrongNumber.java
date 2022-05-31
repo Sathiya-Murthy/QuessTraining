@@ -34,11 +34,11 @@ public class ArmstsrongNumber
         num=sc.nextInt();
         if(isArmstrong(num))
         {
-            System.out.print("Armstrong ");
+            System.out.print( num +" Armstrong ");
         }
         else
         {
-            System.out.print("Not Armstrong ");
+            System.out.print(num +"Not Armstrong ");
         }
     }
 }
