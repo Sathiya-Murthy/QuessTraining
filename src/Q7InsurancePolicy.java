@@ -7,25 +7,25 @@ public class Q7InsurancePolicy {
         System.out.print("Are you married [y/n]: ");
         ch1=scanner.next().charAt(0);
         if(ch1=='y')
-            System.out.println("Your are eligible for insurance policy.");
+            System.out.println("Your are insured.");
         else if(ch1=='n') {
             System.out.print("Are you Male or Female [m/f]: ");
             ch2=scanner.next().charAt(0);
             if(ch2=='m') {
                 System.out.print("Enter your age: ");
                 age = scanner.nextInt();
-                if (age > 30)
-                    System.out.println("You not eligible for insurance policy");
+                if (age < 30)
+                    System.out.println("Your are not insured.");
                 else
-                    System.out.println("Your are eligible for insurance policy.");
+                    System.out.println("Your are insured.");
             }
             else if(ch2=='f') {
                 System.out.print("Enter your age: ");
                 age = scanner.nextInt();
-                if (age > 25)
-                    System.out.println("You not eligible for insurance policy");
+                if (age < 25)
+                    System.out.println("Your are not insured.");
                 else
-                    System.out.println("Your are eligible for insurance policy.");
+                    System.out.println("Your are insured.");
             }
             else
                 System.out.println("Wrong input.");
