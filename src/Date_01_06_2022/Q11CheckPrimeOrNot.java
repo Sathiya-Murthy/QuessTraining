@@ -1,3 +1,5 @@
+package Date_01_06_2022;
+
 import java.util.Scanner;
 
 public class Q11CheckPrimeOrNot {

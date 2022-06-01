@@ -1,3 +1,5 @@
+package Date_31_05_2022;
+
 public class Q9DiscountUsingCommanLine {
     public static void main(String[] args) {
         int Price=Integer.parseInt(args[0]);
