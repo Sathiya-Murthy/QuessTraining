@@ -1,3 +1,5 @@
+package Date_02_06_2022;
+
 import java.util.Scanner;
 
 public class Q28multiplicationTablr {
