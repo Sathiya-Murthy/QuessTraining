@@ -7,6 +7,7 @@ public class Q29alternatePrimeNumber {
     public static void main(String[] args) {
         int end;
         ArrayList<Integer> List=new ArrayList<>();
+        System.out.print("Enter the range: ");
         Scanner scanner=new Scanner(System.in);
         end=scanner.nextInt();
         int count=0;
