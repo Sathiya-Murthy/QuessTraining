@@ -19,5 +19,6 @@ public class Q27FactorofaNumber {
         System.out.println("Enter tha number: ");
         i=scanner.nextInt();
         Factor Fact=new Factor(i);
+
     }
 }
