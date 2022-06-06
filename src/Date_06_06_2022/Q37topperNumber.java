@@ -6,6 +6,7 @@ public class Q37topperNumber {
     public static void main(String[] args) {
         int number,oddNumber=0,evenNumber=0;
         Scanner scanner=new Scanner(System.in);
+        System.out.print("Enter the number: ");
         number=scanner.nextInt();
         String Number=Integer.toString(number);
         for(int i=0;i<Number.length();i++)  {
