@@ -1,7 +1,6 @@
 package Date_31_05_2022;
 
 import java.util.Scanner;
-
 public class Q10daysToMonth {
     public static void main(String[] args) {
         int days,month,remdays;
