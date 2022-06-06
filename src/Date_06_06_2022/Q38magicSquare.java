@@ -30,7 +30,6 @@ public class Q38magicSquare {
            }
            else
                System.out.println("No");
-
         }
         else {
             System.out.println("No");
