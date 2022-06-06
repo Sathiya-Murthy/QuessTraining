@@ -11,7 +11,6 @@ public class Q3ReverseANumber {
         StringBuffer stringBuffer= new StringBuffer();
         stringBuffer.append(str);
         System.out.println("Reverse number: "+stringBuffer.reverse());
-
         }
     }
 
