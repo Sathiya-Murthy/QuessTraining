@@ -9,8 +9,11 @@ public class Movie {
         this.studio=studio;
         this.rating=rating;
     }
-
-
+    Movie(String title,String studio) {
+        this.title=title;
+        this.studio=studio;
+        this.rating="PG";
+    }
 
 }
 
