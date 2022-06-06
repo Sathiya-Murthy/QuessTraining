@@ -1,7 +1,6 @@
 package Date_01_06_2022;
 
 import java.util.Scanner;
-
 public class Q12PrimeNumberInIntervals {
     public static void main(String[] args) {
         int number1,number2,count=0;
