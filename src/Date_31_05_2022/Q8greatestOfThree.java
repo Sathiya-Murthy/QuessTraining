@@ -12,5 +12,6 @@ public class Q8greatestOfThree {
         number3=scanner.nextInt();
         int Greatest=(number1>=number2)?((number1>number3)?number1:number3):((number2>number3)?number2:number3);
         System.out.println("The Greatest number: "+Greatest);
+
     }
 }
