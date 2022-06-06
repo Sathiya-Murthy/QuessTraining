@@ -17,6 +17,5 @@ public class Q11CheckPrimeOrNot {
             System.out.println("The number is Prime.");
         else
             System.out.println("The number is not a prime number");
-
     }
 }
