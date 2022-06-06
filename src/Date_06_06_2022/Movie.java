@@ -28,7 +28,9 @@ public class Movie {
         }
         return pgMovie;
     }
-
+    public static void main(String[] args) {
+        Movie mov=new Movie("Casino Royale","Eon Productions", "PG-13");
+    }
 
 
 }
