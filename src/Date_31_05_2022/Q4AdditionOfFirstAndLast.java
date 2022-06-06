@@ -11,6 +11,5 @@ public class Q4AdditionOfFirstAndLast {
         firstNumber=number/1000;
         lastNumber=number%10;
         System.out.println("The addition of first and last number is: "+(firstNumber+lastNumber));
-
     }
 }
