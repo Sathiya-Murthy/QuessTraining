@@ -7,7 +7,7 @@ public class Q2SimpleInterest {
         int Principle,Years;
         double Interest=7.5;
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter the Principle Amount :");
+        System.out.print("Enter the Principle Amount: ");
         Principle=sc.nextInt();
         System.out.print("Enter the time period in years :");
         Years=sc.nextInt();
