@@ -26,5 +26,4 @@ public class Q6grossSalary {
             System.out.println("Gross Salary= "+GrossSalary);
         }
     }
-
 }
