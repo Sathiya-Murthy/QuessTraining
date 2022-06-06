@@ -15,7 +15,5 @@ public class Q9DiscountUsingCommanLine {
             total=Price*Quantity;
             System.out.println("Total: "+total);
         }
-
-
     }
 }
