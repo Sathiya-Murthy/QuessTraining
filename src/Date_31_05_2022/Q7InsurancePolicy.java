@@ -34,6 +34,5 @@ public class Q7InsurancePolicy {
         }
         else
             System.out.println("Wrong input.");
-
     }
 }
