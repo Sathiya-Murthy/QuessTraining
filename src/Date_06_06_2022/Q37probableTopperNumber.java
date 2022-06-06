@@ -2,7 +2,7 @@ package Date_06_06_2022;
 
 import java.util.Scanner;
 
-public class Q37topperNumber {
+public class Q37probableTopperNumber {
     public static void main(String[] args) {
         int number,oddNumber=0,evenNumber=0;
         Scanner scanner=new Scanner(System.in);
