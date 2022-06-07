@@ -1,7 +1,6 @@
 package Date_06_06_2022;
 
 import java.util.Scanner;
-
 public class Q38magicSquare {
     public static void main(String[] args) {
         int length,sumOfDiagonal1=0,sumOfDiagonal2=0,sumOfFirstRow=0,sumOfFirstColumn=0;
@@ -31,8 +30,6 @@ public class Q38magicSquare {
            else
                System.out.println("No");
         }
-        else {
-            System.out.println("No");
-        }
+        else System.out.println("No");
     }
 }
