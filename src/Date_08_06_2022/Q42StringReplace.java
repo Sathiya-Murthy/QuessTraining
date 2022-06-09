@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Q42StringReplace {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the string: ");
         String inputString;
