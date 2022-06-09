@@ -31,7 +31,5 @@ public class Q43LikeCounter {
                 System.out.println(strings[0]+", "+strings[1]+" and "+(length-2)+" others like this");
             }
         }
-
-
     }
 }
