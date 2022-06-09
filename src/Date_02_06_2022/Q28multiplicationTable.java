@@ -2,7 +2,7 @@ package Date_02_06_2022;
 
 import java.util.Scanner;
 
-public class Q28multiplicationTablr {
+public class Q28multiplicationTable {
     public static void main(String[] args) {
         int number, num=1;
         Scanner scanner = new Scanner(System.in);
