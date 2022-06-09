@@ -2,7 +2,7 @@ package Date_07_06_2022;
 
 import java.util.Scanner;
 
-public class ExceptionsHandleing {
+public class Q40ExceptionsHandleing {
     public static void main(String[] args) {
         int x,y;
         Scanner scanner = new Scanner(System.in);

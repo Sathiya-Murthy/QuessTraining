@@ -1,23 +1,23 @@
 package Date_06_06_2022;
 
-public class Movie {
+public class Q39Movie {
     private String title;
     private String studio;
     private String rating;
-     public Movie(String title,String studio,String rating) {
+     public Q39Movie(String title, String studio, String rating) {
         this.title=title;
         this.studio=studio;
         this.rating=rating;
     }
-    public Movie(String title,String studio) {
+    public Q39Movie(String title, String studio) {
         this.title=title;
         this.studio=studio;
         this.rating="PG";
     }
 
-    public Movie[] getPG(Movie[] movie)
+    public Q39Movie[] getPG(Q39Movie[] movie)
     {
-        Movie[] pgMovie=new Movie[movie.length];
+        Q39Movie[] pgMovie=new Q39Movie[movie.length];
         int index=0;
         for(int i=0 ; i< movie.length;i++)  {
             if(movie[i].rating.equals("PG"))
@@ -29,7 +29,7 @@ public class Movie {
         return pgMovie;
     }
     public static void main(String[] args) {
-        Movie mov=new Movie("Casino Royale","Eon Productions", "PG-13");
+        Q39Movie mov=new Q39Movie("Casino Royale","Eon Productions", "PG-13");
     }
 
 
