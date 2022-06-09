@@ -22,6 +22,5 @@ public class Q44highestScoringWord {
             }
         }
         System.out.println(highScoreWord);
-
     }
 }
