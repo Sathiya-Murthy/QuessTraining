@@ -1,5 +1,4 @@
 package Date_07_06_2022;
-
 import java.util.Scanner;
 
 public class Q40ExceptionsHandleing {
