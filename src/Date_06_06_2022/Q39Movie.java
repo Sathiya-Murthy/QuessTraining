@@ -29,9 +29,9 @@ public class Q39Movie {
         return pgMovie;
     }
     public static void main(String[] args) {
-        Q39Movie mov=new Q39Movie("Casino Royale","Eon Productions", "PG-13");
-    }
 
+         Q39Movie mov=new Q39Movie("Casino Royale","Eon Productions", "PG-13");
+    }
 
 }
 
