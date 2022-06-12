@@ -86,3 +86,101 @@ class PersonDetails{
     }
 }
 
+class Game {
+    private int score;
+    private final Scanner scanner = new Scanner(System.in);
+    private int tempHighScore=0;
+    public Game(){
+        score=0;
+    }
+
+    void game() throws IOException {
+        int randomNumber;
+        String yourChoice;
+        String[] opponentChoice={"rock","paper","scissors","paper","scissors","rock","scissors","rock","paper",};
+        do {
+            System.out.print("Choose your word rock paper scissors and quit: ");
+            yourChoice =scanner.next();
+            randomNumber=(int) (Math.random()*8+0);
+            if(yourChoice.contains("rock") || yourChoice.contains("paper") || yourChoice.contains("scissors")){
+                if(yourChoice.equals("rock")){
+                    switch (opponentChoice[randomNumber]) {
+                        case "scissors" -> {
+                            System.out.println("you win..");
+                            score++;
+                            tempHighScore=score;
+                        }
+                        case "paper" -> {
+                            System.out.println("you loss :(");
+                            if (tempHighScore <= score) {
+                                tempHighScore = score;
+                                setHighScore(tempHighScore);
+                            }
+                            System.out.println("Your Score :" + score);
+                            score = 0;
+                        }
+                        case "rock" -> System.out.println("game draw");
+                    }
+                }
+                if(yourChoice.equals("paper")){
+                    switch (opponentChoice[randomNumber]) {
+                        case "rock" -> {
+                            System.out.println("you win..");
+                            score++;
+                            tempHighScore=score;
+                        }
+                        case "scissors" -> {
+                            System.out.println("you loss :(");
+                            if (tempHighScore <= score) {
+                                tempHighScore = score;
+                                setHighScore(tempHighScore);
+                            }
+                            System.out.println("Your Score :" + score);
+                            score = 0;
+                        }
+                        case "paper" -> System.out.println("game draw");
+                    }
+                }
+                if(yourChoice.equals("scissors")){
+                    switch (opponentChoice[randomNumber]) {
+                        case "paper" -> {
+                            System.out.println("you win..");
+                            score++;
+                            tempHighScore=score;
+                        }
+                        case "rock" -> {
+                            System.out.println("you loss:(");
+                            if (tempHighScore <= score) {
+                                tempHighScore = score;
+                                setHighScore(tempHighScore);
+                            }
+                            System.out.println("Your Score :" + score);
+                            score = 0;
+                        }
+                        case "scissors" -> System.out.println("game draw");
+                    }
+                }
+            }else if (yourChoice.equals("quit")) {
+                System.out.println("Your Score: "+tempHighScore);
+                setHighScore(tempHighScore);
+                break;
+            }else {
+                System.out.println("Wrong input.");
+            }
+        }while (true);
+
+    }
+    void setHighScore(int tempHighScore) throws IOException {
+        HighScore highScore=new HighScore();
+        PersonDetails personDetails= new PersonDetails();
+        if(tempHighScore>personDetails.getPersonScore()){
+            System.out.println("Your new high score :)");
+            personDetails.setPersonScore(tempHighScore);
+            if(personDetails.getPersonScore()>highScore.getHighScore()){
+                System.out.println("Your Score is the highest score");
+                highScore.setHighScore(personDetails.getPersonScore());
+            }
+        }
+    }
+}
+
