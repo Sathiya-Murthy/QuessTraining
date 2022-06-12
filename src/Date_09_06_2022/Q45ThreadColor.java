@@ -26,7 +26,6 @@ class Green implements Runnable {
         System.out.println(ANSI_GREEN+"Green"+ANSI_RESET);
     }
 }
-
 public class Q45ThreadColor {
     public static void main(String[] args) {
        Red red = new Red();
