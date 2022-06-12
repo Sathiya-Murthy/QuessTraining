@@ -93,7 +93,6 @@ class Game {
     public Game(){
         score=0;
     }
-
     void game() throws IOException {
         int randomNumber;
         String yourChoice;
@@ -112,11 +111,11 @@ class Game {
                         }
                         case "paper" -> {
                             System.out.println("you loss :(");
+                            System.out.println("Your Score :" + score);
                             if (tempHighScore <= score) {
                                 tempHighScore = score;
                                 setHighScore(tempHighScore);
                             }
-                            System.out.println("Your Score :" + score);
                             score = 0;
                         }
                         case "rock" -> System.out.println("game draw");
@@ -131,11 +130,11 @@ class Game {
                         }
                         case "scissors" -> {
                             System.out.println("you loss :(");
+                            System.out.println("Your Score :" + score);
                             if (tempHighScore <= score) {
                                 tempHighScore = score;
                                 setHighScore(tempHighScore);
                             }
-                            System.out.println("Your Score :" + score);
                             score = 0;
                         }
                         case "paper" -> System.out.println("game draw");
@@ -150,11 +149,11 @@ class Game {
                         }
                         case "rock" -> {
                             System.out.println("you loss:(");
+                            System.out.println("Your Score :" + score);
                             if (tempHighScore <= score) {
                                 tempHighScore = score;
                                 setHighScore(tempHighScore);
                             }
-                            System.out.println("Your Score :" + score);
                             score = 0;
                         }
                         case "scissors" -> System.out.println("game draw");
@@ -168,20 +167,50 @@ class Game {
                 System.out.println("Wrong input.");
             }
         }while (true);
-
     }
     void setHighScore(int tempHighScore) throws IOException {
         HighScore highScore=new HighScore();
         PersonDetails personDetails= new PersonDetails();
         if(tempHighScore>personDetails.getPersonScore()){
-            System.out.println("Your new high score :)");
             personDetails.setPersonScore(tempHighScore);
+            System.out.println("Your new high score :"+personDetails.getPersonScore());
             if(personDetails.getPersonScore()>highScore.getHighScore()){
-                System.out.println("Your Score is the highest score");
                 highScore.setHighScore(personDetails.getPersonScore());
+                System.out.println("Your Score is the highest score");
             }
         }
     }
-
 }
 
+public class HackathonProgram {
+    public static void main(String[] args) throws IOException {
+        byte input;
+        HighScore highScore = new HighScore();
+        PersonDetails personDetails =new PersonDetails();
+        Game game = new Game();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("1.New Game\n2.Continue\n3.HighScore\nEnter your choice: ");
+        input = scanner.nextByte();
+        switch (input) {
+            case 1: {
+                System.out.print("Enter the player name: ");
+                String playerName=scanner.next();
+                personDetails.setPersonName(playerName);
+                personDetails.setPersonScore(0);
+            }
+            case 2: {
+                System.out.println("HighScore : "+highScore.getHighScore());
+                game.game();
+                break;
+            }
+            case 3: {
+                System.out.println("HighScore : " + highScore.getHighScore());
+                System.out.println(personDetails.getPersonName() +"'s high score :" + personDetails.getPersonScore());
+                break;
+            }
+            default: {
+                System.out.println("Wrong input");
+            }
+        }
+    }
+}
