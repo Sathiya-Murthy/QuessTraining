@@ -9,6 +9,9 @@ class DecimalNumberConversion {
 class OctalNumberConversion {
 }
 
+class HexadecimalNumberConversion {
+}
+
 public class NumberConversion {
 }
 
