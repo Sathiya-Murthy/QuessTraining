@@ -98,65 +98,84 @@ class Game {
         String yourChoice;
         String[] opponentChoice={"rock","paper","scissors","paper","scissors","rock","scissors","rock","paper",};
         do {
-            System.out.print("Choose your word rock paper scissors and quit: ");
+            System.out.print("Choose type your word rock paper scissors and quit: ");
             yourChoice =scanner.next();
+            yourChoice=yourChoice.toLowerCase();
             randomNumber=(int) (Math.random()*8+0);
             if(yourChoice.contains("rock") || yourChoice.contains("paper") || yourChoice.contains("scissors")){
                 if(yourChoice.equals("rock")){
                     switch (opponentChoice[randomNumber]) {
                         case "scissors" -> {
-                            System.out.println("you win..");
+                            System.out.println("player win..");
+                            System.out.println("Computer choose scissors");
                             score++;
                             tempHighScore=score;
                         }
                         case "paper" -> {
-                            System.out.println("you loss :(");
+                            System.out.println("player loss :(");
+                            System.out.println("Computer choose paper");
                             System.out.println("Your Score :" + score);
+                            System.out.println("Your score will be reset");
                             if (tempHighScore <= score) {
                                 tempHighScore = score;
                                 setHighScore(tempHighScore);
                             }
                             score = 0;
                         }
-                        case "rock" -> System.out.println("game draw");
+                        case "rock" ->{
+                            System.out.println("game draw");
+                            System.out.println("Computer also choose rock");
+                        }
                     }
                 }
                 if(yourChoice.equals("paper")){
                     switch (opponentChoice[randomNumber]) {
                         case "rock" -> {
-                            System.out.println("you win..");
+                            System.out.println("player win..");
+                            System.out.println("Computer choose rock");
                             score++;
                             tempHighScore=score;
                         }
                         case "scissors" -> {
-                            System.out.println("you loss :(");
+                            System.out.println("player loss :(");
+                            System.out.println("Computer choose scissors");
                             System.out.println("Your Score :" + score);
+                            System.out.println("Your score will be reset");
                             if (tempHighScore <= score) {
                                 tempHighScore = score;
                                 setHighScore(tempHighScore);
                             }
                             score = 0;
                         }
-                        case "paper" -> System.out.println("game draw");
+                        case "paper" ->{
+                            System.out.println("game draw");
+                            System.out.println("Computer also choose paper");
+                        }
                     }
                 }
                 if(yourChoice.equals("scissors")){
                     switch (opponentChoice[randomNumber]) {
                         case "paper" -> {
-                            System.out.println("you win..");
+                            System.out.println("player win..");
+                            System.out.println("Computer choose paper");
                             score++;
                             tempHighScore=score;
                         }
                         case "rock" -> {
-                            System.out.println("you loss:(");
+                            System.out.println("player loss:(");
+                            System.out.println("Computer choose rock");
                             System.out.println("Your Score :" + score);
+                            System.out.println("Your score will be reset");
                             if (tempHighScore <= score) {
                                 tempHighScore = score;
                                 setHighScore(tempHighScore);
                             }
                             score = 0;
                         }
-                        case "scissors" -> System.out.println("game draw");
+                        case "scissors" -> {
+                            System.out.println("game draw");
+                            System.out.println("Computer also choose scissors");
+                        }
                     }
                 }
             }else if (yourChoice.equals("quit")) {
@@ -213,5 +232,4 @@ public class HackathonProgram {
             }
         }
     }
-
 }
