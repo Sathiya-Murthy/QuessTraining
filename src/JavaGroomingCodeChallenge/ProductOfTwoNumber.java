@@ -23,5 +23,4 @@ public class ProductOfTwoNumber {
         }
         System.out.println(num1*num2);
     }
-
 }
