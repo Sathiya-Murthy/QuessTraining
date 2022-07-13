@@ -29,6 +29,6 @@ public class Q33ArrayUniqueElement {
                 Array.add(array[i]);
 
         }
-        System.out.println("Number of unique element are: "+Array.size());
+        System.out.println(Array);
     }
 }
