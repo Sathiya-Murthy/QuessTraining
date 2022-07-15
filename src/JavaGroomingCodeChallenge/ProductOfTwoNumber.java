@@ -23,5 +23,6 @@ public class ProductOfTwoNumber {
         }
         String Answer= String.valueOf(num1*num2);
         System.out.println(Answer);
+
     }
 }
