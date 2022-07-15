@@ -30,5 +30,6 @@ public class ArrayRotate {
             System.out.println("true");
         else
             System.out.println("false");
+
     }
 }
