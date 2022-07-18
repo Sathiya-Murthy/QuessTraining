@@ -3,26 +3,41 @@ package JavaGroomingCodeChallenge;
 import java.util.Scanner;
 
 public class ProductOfTwoNumber {
+
     public static void main(String[] args) {
-        String number1;
-        String number2;
+        String num1;
+        String num2;
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number 1: ");
-        number1= scanner.next();
+        num1= scanner.next();
         System.out.print("Enter the number 2: ");
-        number2=scanner.next();
-        int num1=0,num2=0,num1Length=number1.length()-1,num2Length=number2.length()-1,tempNumber=0;
+        num2=scanner.next();
+        int m = num1.length();
+        int n = num2.length();
 
-        for(int i=0;i<number1.length();i++) {
-            num2 += (int) (Character.getNumericValue(number1.charAt(i)) * (Math.pow(10, num1Length)));
-            --num1Length;
-        }
-        for(int i=0;i<number2.length();i++) {
-            num2 += (int) (Character.getNumericValue(number2.charAt(i)) * (Math.pow(10, num2Length)));
-            --num2Length;
-        }
-        String Answer= String.valueOf(num1*num2);
-        System.out.println(Answer);
+        int[] result = new int[m + n];
 
+        for (int i = m - 1; i >= 0; i--) {
+            for (int j = n - 1; j >= 0; j--) {
+                int product = (num1.charAt(i) - '0') * (num2.charAt(j) - '0');
+                product += result[i + j + 1];
+
+                result[i + j + 1] = product % 10;
+                result[i + j] += product / 10;
+            }
+        }
+
+
+        StringBuilder sb = new StringBuilder();
+        for (int r : result) {
+            if (sb.length() == 0 && r == 0) {
+                continue;
+            }
+            sb.append(r);
+        }
+        System.out.println(sb.toString());
+        //return sb.toString();
     }
+
+
 }
